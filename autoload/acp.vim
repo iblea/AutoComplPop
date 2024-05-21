@@ -236,7 +236,7 @@ function s:mapForMappingDriven()
         \ 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z',
         \ '0', '1', '2', '3', '4', '5', '6', '7', '8', '9',
         \ '-', '_', '~', '^', '.', ',', ':', '!', '#', '=', '%', '$', '@', '<', '>', '/', '\',
-        \ '<Space>', '<C-h>', '<BS>', ]
+        \ '<Space>', '<BS>', ]
   for key in s:keysMappingDriven
     execute printf('inoremap <silent> %s %s<C-r>=<SID>feedPopup()<CR>',
           \        key, key)
@@ -373,7 +373,7 @@ endfunction
 
 "
 function s:finishPopup(fGroup1)
-  inoremap <C-h> <Nop> | iunmap <C-h>
+  " inoremap <C-h> <Nop> | iunmap <C-h>
   inoremap <BS>  <Nop> | iunmap <BS>
   let s:behavsCurrent = []
   call s:restoreTempOptions(s:GROUP0)
